@@ -1,16 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IoCall } from "react-icons/io5";
 
 export function Navbar() {
   return (
     <header className="navbar py-4 shadow-sm">
       <div className="container flex items-center justify-between">
-        <Image
-          src="/logo.png"
-          width={192 / 1.5}
-          height={130}
-          alt="JeryanneJane.me"
-        />
+        <Link href="#">
+          <Image
+            src="/logo.png"
+            width={192 / 1.5}
+            height={130}
+            alt="JeryanneJane.me"
+          />
+        </Link>
         <ul className="text-md menu menu-horizontal font-semibold">
           <li>
             <Link href="#">Home</Link>
@@ -21,7 +24,7 @@ export function Navbar() {
           <li>
             <details>
               <summary>Services</summary>
-              <ul>
+              <ul className="w-[200px] border-[1px] border-gray-200 shadow-sm">
                 <li>
                   <Link href="#">Coaching Services</Link>
                 </li>
@@ -29,13 +32,10 @@ export function Navbar() {
                   <Link href="#">Coaching Programs</Link>
                 </li>
                 <li>
-                  <hr />
-                </li>
-                <li>
                   <Link href="#">Gatherings & Retreats</Link>
                 </li>
                 <li>
-                  <Link href="#">Cottagecore Dvao</Link>
+                  <Link href="#">Cottagecore Davao</Link>
                 </li>
               </ul>
             </details>
@@ -50,7 +50,9 @@ export function Navbar() {
             <Link href="#">Shop</Link>
           </li>
         </ul>
-        <a className="btn btn-accent text-white">Free Discovery Call!</a>
+        <a className="btn btn-accent text-white">
+          <IoCall /> Free Discovery Call!
+        </a>
       </div>
     </header>
   );

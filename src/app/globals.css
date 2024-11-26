@@ -6,6 +6,9 @@
   @apply text-sm;
 }
 
-.btn-ghost:hover {
-  @apply bg-yellow-100;
+.menu li > :not(ul, .menu-title, details, .btn):hover,
+.menu li > :not(ul, .menu-title, details, .btn):active,
+.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)):hover,
+.menu li > details > summary:active {
+  @apply bg-yellow-100 text-gray-900;
 }
