@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply text-sm;
+  @apply text-white text-[1rem];
 }
 
 .menu li > :not(ul, .menu-title, details, .btn):hover,
@@ -12,3 +12,28 @@
 .menu li > details > summary:active {
   @apply bg-yellow-100 text-gray-900;
 }
+
+h1 {
+  @apply leading-normal font-semibold;
+}
+
+h2 {
+  @apply text-4xl font-semibold;
+}
+
+p {
+  @apply text-[1rem] leading-relaxed font-normal;
+}
+
+.slick-dots {
+  display: flex !important;
+  float: right !important;
+  flex-direction: column !important;
+  right: -40px !important;
+  bottom: 45% !important;
+  width: min-content !important;
+}
+
+/*.slick-dots li.slick-active button:before {*/
+/*    @apply bg-brown-400;*/
+/*}*/

@@ -1,0 +1,1 @@
+export { slideWithFadeVariants } from "./animations";

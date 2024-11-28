@@ -26,6 +26,9 @@ export default {
     },
     container: {
       center: true,
+      screens: {
+        DEFAULT: "1366px",
+      },
     },
   },
   plugins: [typography, daisyui],
