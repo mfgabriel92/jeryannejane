@@ -7,10 +7,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Slide } from "@/app/components/ui";
 import { slideWithFadeVariants } from "@/app/utils";
+import { useEffect, useState } from "react";
 
 export function WhoIsItFor() {
   const variants = slideWithFadeVariants;
-  const desktopScreenSize = window?.innerWidth > 1280;
+  const [desktopScreenSize, setDesktopScreenSize] = useState(true);
+
+  useEffect(() => {
+    const _window = window;
+
+    if (_window) {
+      setDesktopScreenSize(_window.innerWidth > 1280);
+    }
+  }, []);
 
   return (
     <section className="container flex h-screen flex-col items-center gap-8 p-6 xl:flex-row xl:px-0">

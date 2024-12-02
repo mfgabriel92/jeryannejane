@@ -1,4 +1,4 @@
-import { About, Hero, Navbar, WhoIsItFor } from "@/app/components";
+import { About, Hero, Journal, Navbar, WhoIsItFor } from "@/app/components";
 
 export default function HomePage() {
   return (
@@ -7,6 +7,7 @@ export default function HomePage() {
       <Hero />
       <WhoIsItFor />
       <About />
+      <Journal />
     </>
   );
 }

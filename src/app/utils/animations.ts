@@ -1,6 +1,6 @@
 export const slideWithFadeVariants = {
   hidden: {
-    y: 10,
+    y: 20,
     opacity: 0,
   },
   visible: {
