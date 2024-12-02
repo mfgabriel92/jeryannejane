@@ -9,7 +9,7 @@ export function Hero() {
 
   return (
     <section className="flex h-[calc(100vh-97px)] flex-col lg:h-[calc(100vh-119px)] lg:flex-row">
-      <div className="-z-10 flex w-full flex-1 justify-center overflow-hidden bg-yellow-400 lg:relative lg:w-auto lg:justify-end">
+      <div className="-z-10 flex h-full w-full flex-1 justify-center bg-yellow-400 lg:relative lg:w-auto lg:justify-end">
         <motion.div
           initial={{
             x: -40,
@@ -23,13 +23,14 @@ export function Hero() {
             duration: 1.5,
             ease: "easeOut",
           }}
+          className="overflow-hidden"
         >
           <Image
             src="/hero.png"
             width={806}
             height={1024}
             alt=""
-            className="p-6 lg:object-cover"
+            className="object-contain p-6 lg:object-cover"
           />
         </motion.div>
       </div>
@@ -42,7 +43,7 @@ export function Hero() {
           delayChildren: 0.5,
           staggerDirection: -1,
         }}
-        className="flex flex-1 flex-col items-center justify-center gap-8 text-center text-white lg:text-gray-900"
+        className="absolute inset-0 flex flex-1 flex-col items-center justify-center gap-8 text-center text-white lg:relative lg:text-gray-900"
       >
         <h1 className="flex flex-col text-7xl leading-normal">
           <motion.span variants={titleVariants}>The best</motion.span>

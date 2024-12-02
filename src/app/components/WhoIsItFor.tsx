@@ -22,7 +22,7 @@ export function WhoIsItFor() {
   }, []);
 
   return (
-    <section className="container flex h-screen flex-col items-center gap-8 p-6 xl:flex-row xl:px-0">
+    <section className="container flex flex-col items-center gap-8 p-8 text-center md:text-start lg:h-screen xl:flex-row xl:px-0">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -34,7 +34,7 @@ export function WhoIsItFor() {
         }}
         className="align-center flex flex-1 basis-1/2 flex-col justify-center gap-8"
       >
-        <motion.h2 variants={variants}>
+        <motion.h2 variants={variants} className="mt-12 lg:mt-0">
           This space is for the curious, the courageous, and the creative
         </motion.h2>
         <p>

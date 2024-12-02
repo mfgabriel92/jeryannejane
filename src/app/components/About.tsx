@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { slideWithFadeVariants } from "@/app/utils";
 import { useRef } from "react";
+import Image from "next/image";
 
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -14,21 +14,19 @@ export function About() {
   });
 
   const variants = slideWithFadeVariants;
-  const transformY = useTransform(scrollYProgress, [0, 10], ["0%", "50%"]);
-  const y = useSpring(transformY, { damping: 20 });
+  const transformY = useTransform(scrollYProgress, [0, 10], ["0%", "100%"]);
 
   return (
-    <section className="h-screen bg-yellow-400">
-      <div className="container flex h-full flex-1 items-center gap-8">
-        <motion.div style={{ y }}>
+    <section className="flex h-screen items-center bg-yellow-400 p-8">
+      <div className="container flex flex-1 flex-col items-center justify-center gap-8 text-center md:text-start xl:flex-row">
+        <div className="relative flex h-screen flex-1">
           <Image
             src="/about-me.png"
-            width={612}
-            height={530}
+            fill
             alt=""
-            className="border-b-8 border-r-8 border-brown-400"
+            className="border-b-8 border-r-8 border-brown-400 object-cover"
           />
-        </motion.div>
+        </div>
         <motion.div
           initial="hidden"
           whileInView="visible"
