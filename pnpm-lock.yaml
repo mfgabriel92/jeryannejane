@@ -23,6 +23,9 @@ importers:
       react-elastic-carousel:
         specifier: ^0.11.5
         version: 0.11.5(prop-types@15.8.1)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react-is@16.13.1)(react@19.0.0-rc-66855b96-20241106))
+      react-hook-form:
+        specifier: ^7.53.2
+        version: 7.53.2(react@19.0.0-rc-66855b96-20241106)
       react-icons:
         specifier: ^5.3.0
         version: 5.3.0(react@19.0.0-rc-66855b96-20241106)
@@ -1722,6 +1725,12 @@ packages:
       react: 15 - 17
       react-dom: 15 - 17
       styled-components: ^5.1.0
+
+  react-hook-form@7.53.2:
+    resolution: {integrity: sha512-YVel6fW5sOeedd1524pltpHX+jgU2u3DSDtXEaBORNdqiNrsX/nUI/iGXONegttg0mJVnfrIkiV0cmTU6Oo2xw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-icons@5.3.0:
     resolution: {integrity: sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==}
@@ -3830,6 +3839,10 @@ snapshots:
       react-swipeable: 5.5.1(react@19.0.0-rc-66855b96-20241106)
       resize-observer-polyfill: 1.5.0
       styled-components: 5.3.11(@babel/core@7.26.0)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react-is@16.13.1)(react@19.0.0-rc-66855b96-20241106)
+
+  react-hook-form@7.53.2(react@19.0.0-rc-66855b96-20241106):
+    dependencies:
+      react: 19.0.0-rc-66855b96-20241106
 
   react-icons@5.3.0(react@19.0.0-rc-66855b96-20241106):
     dependencies:

@@ -8,7 +8,7 @@ export function Hero() {
   const titleVariants = slideWithFadeVariants;
 
   return (
-    <section className="flex h-[calc(100vh-97px)] flex-col lg:h-[calc(100vh-119px)] lg:flex-row">
+    <section className="flex h-[calc(100vh-88.48px)] lg:flex-row">
       <div className="-z-10 flex h-full w-full flex-1 justify-center bg-yellow-400 lg:relative lg:w-auto lg:justify-end">
         <motion.div
           initial={{

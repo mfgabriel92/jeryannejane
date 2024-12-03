@@ -31,8 +31,6 @@ export function About() {
           initial="hidden"
           whileInView="visible"
           transition={{
-            duration: 2,
-            ease: "backInOut",
             staggerChildren: 0.02,
             staggerDirection: -1,
           }}
