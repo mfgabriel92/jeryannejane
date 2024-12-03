@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { ContactFormData } from "@/app/components";
 import { motion } from "framer-motion";
+import { ErrorMessage } from "@hookform/error-message";
 
 export type ContactFormData = {
   name: string;
@@ -11,10 +12,14 @@ export type ContactFormData = {
 };
 
 export function ContactForm() {
-  const { register, handleSubmit } = useForm<ContactFormData>();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<ContactFormData>({ criteriaMode: "all" });
 
   function onSubmit(data: ContactFormData) {
-    console.log(data);
+    console.log(errors);
   }
 
   return (
@@ -29,7 +34,20 @@ export function ContactForm() {
         <input
           type="text"
           className="input input-bordered focus:input-accent"
-          {...register("name", { required: true })}
+          {...register("name", {
+            required: "Please, input your name",
+            pattern: {
+              value: /^[a-zA-Zà-ÿÀ-Ÿ'’\-.\s]{1,50}$/,
+              message: "Invalid name format",
+            },
+          })}
+        />
+        <ErrorMessage
+          errors={errors}
+          name="name"
+          render={({ message }) => (
+            <p className="mt-2 text-sm text-red-500">{message}</p>
+          )}
         />
       </motion.label>
 
@@ -40,7 +58,20 @@ export function ContactForm() {
         <input
           type="email"
           className="input input-bordered focus:input-accent"
-          {...register("email", { required: true })}
+          {...register("email", {
+            required: "Please, input your e-mail",
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: "Invalid e-mail format",
+            },
+          })}
+        />
+        <ErrorMessage
+          errors={errors}
+          name="email"
+          render={({ message }) => (
+            <p className="mt-2 text-sm text-red-500">{message}</p>
+          )}
         />
       </motion.label>
 
@@ -51,8 +82,17 @@ export function ContactForm() {
         <textarea
           placeholder="Your message or question"
           className="input input-bordered h-[220px] focus:input-accent"
-          {...register("message", { required: true })}
+          {...register("message", {
+            required: "Please, write your message or question",
+          })}
         ></textarea>
+        <ErrorMessage
+          errors={errors}
+          name="message"
+          render={({ message }) => (
+            <p className="mt-2 text-sm text-red-500">{message}</p>
+          )}
+        />
       </motion.label>
 
       <motion.label className="form-control mt-4 flex w-full items-end">
