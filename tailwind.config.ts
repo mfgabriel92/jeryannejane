@@ -16,7 +16,7 @@ export default {
           400: "#FFFD9E",
         },
         brown: {
-          400: "#D49B6C",
+          400: "#EA8F45",
         },
         gray: {
           300: "#FAFAFA",
