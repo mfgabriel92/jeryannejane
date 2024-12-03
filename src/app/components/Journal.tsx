@@ -22,7 +22,6 @@ export function Journal() {
           duration: 2,
           ease: "backInOut",
           staggerChildren: 0.02,
-          staggerDirection: -1,
         }}
         className="grid h-full w-full grid-cols-1 items-stretch gap-8 md:grid-cols-2"
       >

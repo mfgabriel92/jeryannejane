@@ -14,7 +14,7 @@
 }
 
 h1 {
-  @apply leading-normal font-semibold;
+  @apply leading-normal font-semibold text-5xl lg:text-7xl;
 }
 
 h2 {
@@ -25,6 +25,10 @@ p {
   @apply text-[1rem] leading-relaxed font-normal;
 }
 
+h1, h2, p {
+  @apply text-center lg:text-start;
+}
+
 .slick-dots {
   display: flex !important;
   float: right !important;
@@ -33,7 +37,3 @@ p {
   bottom: 45% !important;
   width: min-content !important;
 }
-
-/*.slick-dots li.slick-active button:before {*/
-/*    @apply bg-brown-400;*/
-/*}*/

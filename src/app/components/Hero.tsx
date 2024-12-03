@@ -23,15 +23,9 @@ export function Hero() {
             duration: 1.5,
             ease: "easeOut",
           }}
-          className="overflow-hidden"
+          className="relative h-full w-full overflow-hidden"
         >
-          <Image
-            src="/hero.png"
-            width={806}
-            height={1024}
-            alt=""
-            className="object-contain p-6 lg:object-cover"
-          />
+          <Image src="/hero.png" fill alt="" className="object-cover p-6" />
         </motion.div>
       </div>
       <motion.div
@@ -45,13 +39,16 @@ export function Hero() {
         }}
         className="absolute inset-0 flex flex-1 flex-col items-center justify-center gap-8 text-center text-white lg:relative lg:text-gray-900"
       >
-        <h1 className="flex flex-col text-7xl leading-normal">
+        <h1 className="flex flex-col leading-normal">
           <motion.span variants={titleVariants}>The best</motion.span>
           <motion.span variants={titleVariants}>relationships</motion.span>
           <motion.span variants={titleVariants}>are built with</motion.span>
           <motion.span variants={titleVariants}>authenticity</motion.span>
         </h1>
-        <motion.p variants={titleVariants} className="text-bold text-2xl">
+        <motion.p
+          variants={titleVariants}
+          className="text-bold text-xl md:text-2xl"
+        >
           It is my mission to help you have it.
         </motion.p>
       </motion.div>

@@ -90,7 +90,7 @@ export function WhoIsItFor() {
             create and nurture the best relationship for you.
           </motion.span>
         </p>
-        <div className="flex flex-1 justify-center gap-4">
+        <div className="flex flex-1 flex-col justify-center gap-4 md:flex-row">
           <Link href="#" className="btn btn-accent">
             Explore the Coaching Services
           </Link>

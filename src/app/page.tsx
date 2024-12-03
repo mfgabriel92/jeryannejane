@@ -1,4 +1,5 @@
 import { About, Hero, Journal, Navbar, WhoIsItFor } from "@/app/components";
+import { Testimonials } from "@/app/components/Testimonials";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <WhoIsItFor />
       <About />
       <Journal />
+      <Testimonials />
     </>
   );
 }

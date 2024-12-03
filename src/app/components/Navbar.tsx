@@ -14,12 +14,12 @@ export function Navbar() {
 
 function DesktopNavbar() {
   return (
-    <header className="navbar hidden py-4 shadow-sm lg:block">
+    <header className="navbar hidden py-2 shadow-sm lg:block">
       <div className="container flex items-center justify-between">
         <Link href="#">
           <Image
             src="/logo.png"
-            width={192 / 1.5}
+            width={192 / 1.8}
             height={130}
             alt="JeryanneJane.me"
           />
