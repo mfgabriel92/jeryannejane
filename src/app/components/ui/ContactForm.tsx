@@ -18,7 +18,10 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-1 flex-col">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex w-full flex-1 flex-col sm:w-[80%]"
+    >
       <motion.label className="form-control w-full">
         <div className="label">
           <div className="label-text">Your name</div>

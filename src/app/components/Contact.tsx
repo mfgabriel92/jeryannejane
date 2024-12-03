@@ -7,7 +7,7 @@ import { ContactForm } from "@/app/components/ui";
 
 export function Contact() {
   return (
-    <section className="container flex items-center lg:h-screen">
+    <section className="container flex flex-col items-center p-8 lg:h-screen lg:flex-row">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -15,7 +15,7 @@ export function Contact() {
           staggerChildren: 0.02,
           staggerDirection: -1,
         }}
-        className="flex flex-1 flex-col gap-8"
+        className="flex flex-1 flex-col items-center gap-8"
       >
         <motion.h2 variants={slideWithFadeVariants} className="mt-12">
           Still not sure, or just have questions?
@@ -45,9 +45,7 @@ export function Contact() {
           I look forward to hearing from you!
         </motion.p>
       </motion.div>
-      <div className="flex flex-1">
-        <ContactForm />
-      </div>
+      <ContactForm />
     </section>
   );
 }
