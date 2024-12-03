@@ -1,6 +1,7 @@
 import {
   About,
   Contact,
+  Footer,
   Hero,
   Journal,
   Navbar,
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Journal />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }

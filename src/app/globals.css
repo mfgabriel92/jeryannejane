@@ -38,28 +38,6 @@ h1, h2, p {
   width: min-content !important;
 }
 
-/* For WebKit Browsers */
-::-webkit-scrollbar {
-  width: 12px;
+svg:hover {
+  @apply scale-125 transition-transform;
 }
-
-::-webkit-scrollbar-track {
-  background: #f0f0f0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #EA8F45;
-}
-
-/* For Firefox */
-html,
-html:hover {
-  scrollbar-color: #EA8F45 #FFFD9E;
-  scrollbar-width: initial;
-}
-

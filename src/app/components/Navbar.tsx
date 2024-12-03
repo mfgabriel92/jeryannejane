@@ -14,9 +14,9 @@ export function Navbar() {
 
 function DesktopNavbar() {
   return (
-    <header className="navbar hidden py-2 shadow-sm lg:block">
+    <header className="navbar fixed z-20 hidden bg-white py-2 shadow-sm lg:block">
       <div className="container flex items-center justify-between">
-        <Link href="#">
+        <Link href="/">
           <Image
             src="/logo.png"
             width={192 / 1.8}
@@ -26,10 +26,10 @@ function DesktopNavbar() {
         </Link>
         <ul className="text-md menu menu-horizontal font-semibold">
           <li>
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
             <details>
@@ -70,7 +70,7 @@ function DesktopNavbar() {
 
 function MobileNavbar() {
   return (
-    <header className="navbar flex flex-1 py-4 shadow-sm lg:hidden">
+    <header className="navbar fixed z-20 flex flex-1 bg-white py-4 shadow-sm lg:hidden">
       <Link href="#" className="mx-auto">
         <Image
           src="/logo.png"

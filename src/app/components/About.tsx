@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { slideWithFadeVariants } from "@/app/utils";
 import { useRef } from "react";
@@ -14,12 +14,11 @@ export function About() {
   });
 
   const variants = slideWithFadeVariants;
-  const transformY = useTransform(scrollYProgress, [0, 10], ["0%", "100%"]);
 
   return (
     <section className="flex h-screen items-center bg-yellow-400 p-8">
       <div className="container flex flex-1 flex-col items-center justify-center gap-8 text-center md:text-start xl:flex-row">
-        <div className="relative flex h-screen flex-1">
+        <div className="relative flex h-screen flex-1 pt-[88.48px]">
           <Image
             src="/about-me.png"
             fill

@@ -3,4 +3,5 @@ export { Navbar } from "./Navbar";
 export { WhoIsItFor } from "./WhoIsItFor";
 export { About } from "./About";
 export { Journal } from "./Journal";
-export { Contact, type ContactFormData } from "./Contact";
+export { Contact } from "./Contact";
+export { Footer } from "./Footer";

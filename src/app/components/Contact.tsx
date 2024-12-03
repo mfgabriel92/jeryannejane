@@ -15,7 +15,7 @@ export function Contact() {
           staggerChildren: 0.02,
           staggerDirection: -1,
         }}
-        className="flex flex-1 flex-col items-center gap-8"
+        className="flex flex-1 flex-col items-center gap-8 lg:items-start"
       >
         <motion.h2 variants={slideWithFadeVariants} className="mt-12">
           Still not sure, or just have questions?
