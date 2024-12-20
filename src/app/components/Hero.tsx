@@ -9,19 +9,20 @@ export function Hero() {
 
   return (
     <section className="flex h-screen pt-[88.48px] lg:flex-row">
-      <div className="-z-10 flex h-full w-full flex-1 justify-center bg-yellow-400 lg:relative lg:w-auto lg:justify-end">
+      <div
+        className="-z-10 flex h-full w-full flex-1 justify-center bg-yellow-400 lg:relative lg:w-auto lg:justify-end">
         <motion.div
           initial={{
             x: -40,
-            opacity: 0,
+            opacity: 0
           }}
           animate={{
             x: 0,
-            opacity: 1,
+            opacity: 1
           }}
           transition={{
             duration: 1.5,
-            ease: "easeOut",
+            ease: "easeOut"
           }}
           className="relative h-full w-full overflow-hidden"
         >
@@ -35,7 +36,7 @@ export function Hero() {
           ease: "easeOut",
           staggerChildren: 0.05,
           delayChildren: 0.5,
-          staggerDirection: -1,
+          staggerDirection: -1
         }}
         className="absolute inset-0 flex flex-1 flex-col items-center justify-center gap-8 text-center text-white lg:relative lg:text-gray-900"
       >
